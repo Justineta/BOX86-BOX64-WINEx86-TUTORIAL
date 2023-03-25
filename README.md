@@ -45,7 +45,7 @@ We are going to use ubuntu jammy on mainline on a panfrost mesa powered ARM64 sy
 2. since you are on Panfrost (RPI4 also has mesa drivers but this only applies to panfrost), we will need OpenGL 3.3 for many games, so we should force it:
 
     ```
-    sudo nano /etc/environment and on a blank line just type "PAN_MESA_DEBUG=gl3" without quotes, save and close (it will need a reboot later on).
+    sudo bash -c "echo 'PAN_MESA_DEBUG=gl3' >> /etc/environment"
     ```
     
     on RPI4 it should be the same to export these two variables: MESA_GL_VERSION_OVERRIDE=3.3 and MESA_GLSL_VERSION_OVERRIDE=330 on two different lines.
